@@ -21,7 +21,7 @@ const links = [{
   href: '',
 }];
 
-const copyright = <Fragment>Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品</Fragment>;
+const copyright = <Fragment>Copyright <Icon type="copyright" />这是一段文字这是一段文字这是一段文字</Fragment>;
 
 class UserLayout extends React.PureComponent {
   getPageTitle() {
@@ -43,10 +43,10 @@ class UserLayout extends React.PureComponent {
               <div className={styles.header}>
                 <Link to="/">
                   <img alt="logo" className={styles.logo} src={logo} />
-                  <span className={styles.title}>Ant Design</span>
+                  <span className={styles.title}>云制播</span>
                 </Link>
               </div>
-              <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+              <div className={styles.desc}>这是一段文字这是一段文字这是一段文字</div>
             </div>
             <Switch>
               {getRoutes(match.path, routerData).map(item =>

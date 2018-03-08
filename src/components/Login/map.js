@@ -11,7 +11,7 @@ const map = {
       placeholder: 'admin',
     },
     rules: [{
-      required: true, message: 'Please enter username!',
+      required: true, message: '请输入您的帐户名！',
     }],
   },
   Password: {
@@ -23,7 +23,7 @@ const map = {
       placeholder: '888888',
     },
     rules: [{
-      required: true, message: 'Please enter password!',
+      required: true, message: '请输入您的密码！',
     }],
   },
   Mobile: {

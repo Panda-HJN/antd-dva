@@ -10,21 +10,21 @@ import 'moment/locale/zh-cn';
 import './rollbar';
 
 import './index.less';
-// 1. Initialize
+// 1. 初始化
 const app = dva({
   history: createHistory(),
 });
 
-// 2. Plugins
+// 2. 插件
 app.use(createLoading());
 
-// 3. Register global model
+// 3. 注册全局 modal
 app.model(require('./models/global').default);
 
-// 4. Router
+// 4. 路由
 app.router(require('./router').default);
 
-// 5. Start
+// 5. 开始吧
 app.start('#root');
 
 export default app._store;  // eslint-disable-line
