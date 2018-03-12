@@ -73,7 +73,8 @@
     "roadhog": "^2.1.0",
     "roadhog-api-doc": "^0.3.4",
     "stylelint": "^8.4.0",
-    "stylelint-config-standard": "^18.0.0"
+    "stylelint-config-standard": "^18.0.0",
+    "webpack-manifest-plugin": "^2.0.0-rc.2"
   },
   "optionalDependencies": {
     "puppeteer": "^1.1.1"
