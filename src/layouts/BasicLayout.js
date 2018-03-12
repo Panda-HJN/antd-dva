@@ -206,17 +206,17 @@ class BasicLayout extends React.PureComponent {
           <Footer style={{ padding: 0 }}>
             <GlobalFooter
               links={[{
-                key: '这是一段文字',
+                key: '这是一段文字1',
                 title: '这是一段文字',
                 href: 'http://pro.ant.design',
                 blankTarget: true,
               }, {
-                key: 'github',
+                key: '这是一段文字2',
                 title: <Icon type="github" />,
                 href: 'https://github.com/ant-design/ant-design-pro',
                 blankTarget: true,
               }, {
-                key: '这是一段文字',
+                key: '这是一段文字3',
                 title: '这是一段文字',
                 href: 'http://ant.design',
                 blankTarget: true,

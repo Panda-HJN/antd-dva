@@ -1,7 +1,7 @@
 import { routerRedux } from 'dva/router';
-import { fakeAccountLogin } from '../services/api';
-import { setAuthority } from '../utils/authority';
-import { reloadAuthorized } from '../utils/Authorized';
+import { fakeAccountLogin } from '../services/api'; // api 调用
+import { setAuthority } from '../utils/authority';  // 权限获取
+import { reloadAuthorized } from '../utils/Authorized';  // some what ??
 
 export default {
   namespace: 'login',
@@ -10,17 +10,25 @@ export default {
     status: undefined,
   },
 
+
+  // 异步调用都在这里
   effects: {
     *login({ payload }, { call, put }) {
+      //call, put 貌似是redux-saga 的API
+      //call 貌似 从api 异步获取数据
+      //put 貌似 把数据 存到 store 里
+      console.log(payload)
+      console.log(call)
+      console.log(put)
       const response = yield call(fakeAccountLogin, payload);
       yield put({
-        type: 'changeLoginStatus',
+        type: 'changeLoginStatus', // 一个 type 代表 reducer 里的一个函数
         payload: response,
       });
       // Login successfully
       if (response.status === 'ok') {
         reloadAuthorized();
-        yield put(routerRedux.push('/'));
+        yield put(routerRedux.push('/')); // router 的跳转
       }
     },
     *logout(_, { put, select }) {
@@ -56,3 +64,5 @@ export default {
     },
   },
 };
+
+// 函数式的入门学习 刻不容缓啊
